@@ -6,71 +6,52 @@
     <title>SoulBound Crimson Eclipse | Official Site</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="dynamic-bg" class="hero-container">
+
+    <!-- Genshin Style Live Video Background -->
+    <div class="hero-container">
+        <video autoplay muted loop id="bg-video">
+            <!-- HQ Live Cinematic Loop -->
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-dramatic-sunset-over-a-mountain-landscape-42900-large.mp4" type="video/mp4">
+        </video>
         <div class="overlay"></div>
-        
+
+        <!-- Top Navbar -->
         <nav class="navbar">
-            <div class="logo">YO UNIVERSE</div>
-            <div class="nav-links">
-                <a href="#game">GAME</a>
-                <a href="#characters">CHARACTERS</a>
-                <a href="#news">NEWS</a>
+            <div class="nav-left">
+                <div class="logo">YO UNIVERSE</div>
+                <div class="nav-links">
+                    <a href="#home" class="active">HOME</a>
+                    <a href="#news">NEWS</a>
+                    <a href="#characters">CHARACTERS</a>
+                    <a href="#explore">EXPLORE</a>
+                </div>
             </div>
-            <a href="#" class="btn-pre">PRE-REGISTER</a>
+            <div class="nav-right">
+                <a href="#" class="btn-download"><i class="fas fa-download"></i> Download</a>
+            </div>
         </nav>
 
-        <div class="hero-content">
-            <h3 class="studio-tag">A GAME BY YO UNIVERSE</h3>
-            <h1 class="game-title">SOULBOUND<br><span class="crimson-text">CRIMSON ECLIPSE</span></h1>
-            <p class="tagline">Bound by fate. Eclipse the darkness.</p>
-            
-            <div class="time-badge" id="time-badge">
-                <span class="pulse-dot"></span>
-                <span id="time-text">Syncing World Time...</span>
+        <!-- Center Play Button (Genshin Trailer/Sound style) -->
+        <div class="hero-center">
+            <div class="play-btn-wrapper">
+                <button class="play-btn"><i class="fas fa-play"></i></button>
             </div>
+            <p class="hero-subtitle">SOULBOUND CRIMSON ECLIPSE</p>
+            <h2 class="hero-status">Bound By Fate. Eclipse The Darkness.</h2>
 
-            <div class="cta-group">
-                <button class="btn-primary">PRE-REGISTER NOW</button>
-                <button class="btn-secondary">WATCH TRAILER</button>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <!-- Character Showcase Section -->
-        <div id="characters" class="character-section">
-            <h2 class="section-title">MEET THE HEROINES</h2>
-            <div class="character-grid">
-                
-                <!-- Twin Sister 1 -->
-                <div class="char-card">
-                    <div class="char-img-box">
-                        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500" alt="Crimson Sister">
-                    </div>
-                    <div class="char-info">
-                        <span class="element-tag">CRIMSON FIRE</span>
-                        <h3>ECLIPSE SISTER</h3>
-                        <p>The elder twin who wields the dark crimson blade of destiny.</p>
-                    </div>
-                </div>
-
-                <!-- Twin Sister 2 -->
-                <div class="char-card">
-                    <div class="char-img-box">
-                        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500" alt="Soulbound Sister">
-                    </div>
-                    <div class="char-info">
-                        <span class="element-tag">SOUL LIGHT</span>
-                        <h3>SOULBOUND SISTER</h3>
-                        <p>The younger twin possessing the ancient light of Eclipseria.</p>
-                    </div>
-                </div>
-
+            <!-- Store Badges Bar (Genshin Style) -->
+            <div class="download-badges">
+                <div class="badge-card"><i class="fab fa-playstation"></i><span>PS5 | PS4</span></div>
+                <div class="badge-card"><i class="fab fa-windows"></i><span>PC Download</span></div>
+                <div class="badge-card"><i class="fab fa-xbox"></i><span>Xbox Series X|S</span></div>
+                <div class="badge-card"><i class="fab fa-google-play"></i><span>Google Play</span></div>
+                <div class="badge-card"><i class="fab fa-apple"></i><span>App Store</span></div>
             </div>
         </div>
-            <p>© 2026 YO UNIVERSE. All Rights Reserved.</p>
-        </footer>
+
     </div>
 
     <script src="script.js"></script>
