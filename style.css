@@ -265,15 +265,17 @@ body, html {
     margin: 0 auto !important;
 }
 
+.company-footer-branding {
+    width: 100% !important;
+    max-width: 320px !important; /* यह एकदम सही और सॉलिड चौड़ाई है */
+    margin: 0 auto !important;
+}
+
 .footer-company-logo {
     width: 100% !important;
     height: auto !important;
+    max-width: 320px !important; /* लोगो को एकदम पर्फ़ेक्ट प्रोपोर्शन में रखेगा */
     object-fit: contain !important;
     display: block !important;
     margin: 0 auto !important;
-}
-.copyright-text {
-    font-size: 0.65rem;
-    color: #777;
-    letter-spacing: 1px;
 }
