@@ -259,20 +259,22 @@ body, html {
     color: #fff;
 }
 
+.company-footer-branding {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
 .footer-company-logo {
-    width: 450px !important; /* यहाँ से साइज एकदम परफेक्ट और बड़ी कर दी है */
+    width: 500px !important;
     height: auto !important;
-    max-width: 100% !important;
+    max-width: none !important;
     object-fit: contain !important;
     display: block !important;
 }
-
-width: 280px !important;
-    height: auto !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    display: block !important;
-
 .copyright-text {
     font-size: 0.65rem;
     color: #777;
