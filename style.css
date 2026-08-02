@@ -260,20 +260,21 @@ body, html {
 }
 
 .company-footer-branding {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 auto !important;
-    display: block !important;
-    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
 
+/* यहाँ लोगो का साइज़ एकदम बड़ा और साफ़ कर दिया है */
 .footer-company-logo {
-    width: 380px !important; /* यहाँ से साइज एकदम परफेक्ट और बड़ी दिखेगी */
-    height: auto !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    display: inline-block !important;
+    height: 90px !important;
+    width: auto !important;
+    max-width: 400px !important;
+    object-fit: contain;
+    display: block;
 }
+
 .copyright-text {
     font-size: 0.65rem;
     color: #777;
