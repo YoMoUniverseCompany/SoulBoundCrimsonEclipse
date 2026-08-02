@@ -261,14 +261,14 @@ body, html {
 
 .company-footer-branding {
     width: 100% !important;
-    max-width: 250px !important; 
+    max-width: 280px !important; /* न ज्यादा बड़ा, न ज्यादा छोटा - एकदम परफेक्ट प्रोपोर्शन */
     margin: 0 auto !important;
 }
 
 .footer-company-logo {
     width: 100% !important;
     height: auto !important;
-    max-width: 180px !important; /* लोगो का एकदम सही और संतुलित साइज़ */
+    max-width: 200px !important; /* लोगो की साइज बिल्कुल उतनी ही डिसेंट और एलीट रखेगा जितनी जरूरत है */
     object-fit: contain !important;
     display: block !important;
     margin: 0 auto !important;
