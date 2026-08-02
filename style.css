@@ -440,3 +440,15 @@ body, html {
     font-size: 0.8rem;
     color: #555;
 }
+.coming-soon-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff2a5f, #ffb703);
+    color: #000;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 2px;
+    box-shadow: 0 0 10px rgba(255, 42, 95, 0.6);
+}
