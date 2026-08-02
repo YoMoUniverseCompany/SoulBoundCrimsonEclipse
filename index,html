@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulBound Crimson Eclipse | Official Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="dynamic-bg" class="hero-container">
+        <div class="overlay"></div>
+        
+        <nav class="navbar">
+            <div class="logo">YO UNIVERSE</div>
+            <div class="nav-links">
+                <a href="#game">GAME</a>
+                <a href="#characters">CHARACTERS</a>
+                <a href="#news">NEWS</a>
+            </div>
+            <a href="#" class="btn-pre">PRE-REGISTER</a>
+        </nav>
+
+        <div class="hero-content">
+            <h3 class="studio-tag">A GAME BY YO UNIVERSE</h3>
+            <h1 class="game-title">SOULBOUND<br><span class="crimson-text">CRIMSON ECLIPSE</span></h1>
+            <p class="tagline">Bound by fate. Eclipse the darkness.</p>
+            
+            <div class="time-badge" id="time-badge">
+                <span class="pulse-dot"></span>
+                <span id="time-text">Syncing World Time...</span>
+            </div>
+
+            <div class="cta-group">
+                <button class="btn-primary">PRE-REGISTER NOW</button>
+                <button class="btn-secondary">WATCH TRAILER</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>© 2026 YO UNIVERSE. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
