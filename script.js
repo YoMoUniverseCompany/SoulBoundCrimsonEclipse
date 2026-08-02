@@ -1,41 +1,34 @@
-// Real-Time Dynamic Environment Switcher with Time Detection
-function syncDynamicEnvironment() {
-    const timeBadge = document.getElementById('world-time-text');
+// 4-Tier Environment & Video Switcher (Morning, Afternoon, Evening, Night)
+function updateGameEnvironment() {
     const bgVideo = document.getElementById('bg-video');
     const now = new Date();
     const hours = now.getHours();
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    const formattedHours = hours % 12 || 12;
 
-    let environment = "DAYTIME (AQUARIA REALM)";
-    let videoSrc = "https://assets.mixkit.co/videos/preview/mixkit-bright-sun-shining-in-a-blue-sky-41584-large.mp4"; 
+    let videoSrc = "";
 
-    // Evening / Sunset (5 PM to 7 PM)
-    if (hours >= 17 && hours < 20) {
-        environment = "SUNSET (CRIMSON DUSK)";
-        videoSrc = "https://assets.mixkit.co/videos/preview/mixkit-dramatic-sunset-over-a-mountain-landscape-42900-large.mp4";
+    // 1. Morning Time (6 AM to 11 AM) -> सुबह का ताज़ा सीन, हल्की वाइट रोशनी और साफ आसमान
+    if (hours >= 6 && hours < 12) {
+        videoSrc = "morning_aquaria.mp4"; 
     } 
-    // Night Time (8 PM to 5 AM)
-    else if (hours >= 20 || hours < 6) {
-        environment = "NIGHT (SOULBOUND ECLIPSE)";
-        videoSrc = "https://assets.mixkit.co/videos/preview/mixkit-time-lapse-of-the-starry-night-sky-41580-large.mp4";
+    // 2. Afternoon Time (12 PM to 4 PM) -> दोपहर का तेज और चमकदार सीन
+    else if (hours >= 12 && hours < 17) {
+        videoSrc = "afternoon_aquaria.mp4";
+    }
+    // 3. Evening / Sunset (5 PM to 7 PM) -> शाम का सनसेट, आधा लाल और सफेद चाँद
+    else if (hours >= 17 && hours < 20) {
+        videoSrc = "sunset_aquaria.mp4";
+    } 
+    // 4. Night Time (8 PM to 5 AM) -> रात का डार्क सीन और बड़ा सा लाल चाँद (Crimson Eclipse)
+    else {
+        videoSrc = "night_aquaria.mp4";
     }
 
-    if (timeBadge) {
-        timeBadge.innerText = `WORLD ENVIRONMENT: ${environment} (${formattedHours}:${minutes} ${ampm})`;
-    }
-
-    if (bgVideo && bgVideo.getAttribute('src') !== videoSrc) {
+    if (bgVideo && !bgVideo.src.includes(videoSrc)) {
         bgVideo.src = videoSrc;
         bgVideo.load();
-        bgVideo.play().catch(e => console.log("Auto-play waiting for interaction: ", e));
+        bgVideo.play().catch(e => console.log("Autoplay waiting for user interaction: ", e));
     }
 }
 
-syncDynamicEnvironment();
-setInterval(syncDynamicEnvironment, 30000);
-
-document.getElementById('play-trailer-btn')?.addEventListener('click', () => {
-    alert('SoulBound Crimson Eclipse Cinematic Trailer Loading...');
-});
+updateGameEnvironment();
+setInterval(updateGameEnvironment, 60000);
