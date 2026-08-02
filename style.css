@@ -13,7 +13,6 @@ body, html {
     color: #fff;
 }
 
-/* Background Video Styling */
 .video-container {
     position: fixed;
     top: 0;
@@ -39,7 +38,6 @@ body, html {
     background: rgba(0, 0, 0, 0.4);
 }
 
-/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -116,7 +114,6 @@ body, html {
     transform: scale(1.05);
 }
 
-/* Hero Section */
 .hero-section {
     position: relative;
     height: 100vh;
@@ -128,7 +125,6 @@ body, html {
     padding-top: 60px;
 }
 
-/* Stylish Play Button */
 .play-trailer-container {
     margin-bottom: 15px;
 }
@@ -168,7 +164,6 @@ body, html {
     text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 
-/* Platforms & ESRB */
 .platforms-container {
     position: absolute;
     bottom: 80px;
@@ -203,7 +198,6 @@ body, html {
     border-color: #ffb703;
 }
 
-/* ESRB Box */
 .esrb-rating-box {
     display: flex;
     background: rgba(0, 0, 0, 0.85);
@@ -236,7 +230,6 @@ body, html {
     line-height: 1.2;
 }
 
-/* Footer Section */
 .main-footer {
     position: absolute;
     bottom: 0;
@@ -258,7 +251,6 @@ body, html {
 .footer-links-menu a {
     color: #aaa;
     text-decoration: none;
-    font-size: 0.75srem;
     font-size: 0.75rem;
     transition: color 0.2s;
 }
@@ -271,12 +263,16 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
 }
 
+/* यहाँ लोगो का साइज़ एकदम बड़ा और साफ़ कर दिया है */
 .footer-company-logo {
-    height: 22px;
+    height: 90px !important;
+    width: auto !important;
+    max-width: 400px !important;
     object-fit: contain;
+    display: block;
 }
 
 .copyright-text {
