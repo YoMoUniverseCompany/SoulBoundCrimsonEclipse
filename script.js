@@ -1,33 +1,29 @@
-function updateWorldState() {
+// Real-time Environment Syncing
+function updateWorldTime() {
+    const timeBadge = document.getElementById('world-time-text');
     const now = new Date();
     const hours = now.getHours();
-    const bgContainer = document.getElementById('dynamic-bg');
-    const timeText = document.getElementById('time-text');
-    
-    let state = "";
-    
-    // Clear previous classes
-    bgContainer.classList.remove('bg-day', 'bg-evening', 'bg-night');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const formattedHours = hours % 12 || 12;
 
-    // Time Detection Logic
-    if (hours >= 6 && hours < 17) {
-        // Day Time (6 AM to 5 PM)
-        bgContainer.classList.add('bg-day');
-        state = "WORLD TIME: DAYTIME ☀️";
-    } else if (hours >= 17 && hours < 19) {
-        // Evening / Sunset (5 PM to 7 PM)
-        bgContainer.classList.add('bg-evening');
-        state = "WORLD TIME: CRIMSON SUNSET 🌅";
-    } else {
-        // Night Time (7 PM to 6 AM)
-        bgContainer.classList.add('bg-night');
-        state = "WORLD TIME: ECLIPSE NIGHT 🌙";
+    let environment = "DAYTIME";
+    if (hours >= 17 && hours < 20) {
+        environment = "SUNSET / ECLIPSE DUSK";
+    } else if (hours >= 20 || hours < 6) {
+        environment = "NIGHT TIME";
     }
 
-    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    timeText.innerText = `${state} (${timeString})`;
+    if (timeBadge) {
+        timeBadge.innerText = `WORLD TIME: ${environment} (${formattedHours}:${minutes} ${ampm})`;
+    }
 }
 
-// Run immediately and update every minute
-updateWorldState();
-setInterval(updateWorldState, 60000);
+// Initial Sync
+updateWorldTime();
+setInterval(updateWorldTime, 60000);
+
+// Play Trailer Button Interactive Alert
+document.getElementById('play-trailer-btn')?.addEventListener('click', () => {
+    alert('SoulBound Crimson Eclipse Official Trailer Coming Soon!');
+});
