@@ -8,9 +8,10 @@
 body, html {
     width: 100%;
     min-height: 100vh;
-    background: #05050a;
+    background: #030305;
     color: #fff;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* HERO SECTION */
@@ -27,13 +28,10 @@ body, html {
 
 #bg-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
     z-index: -2;
     object-fit: cover;
 }
@@ -42,37 +40,69 @@ body, html {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.35);
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%);
     z-index: -1;
 }
 
-/* NAVBAR */
+/* NAVBAR & GENSHIN STYLE SIDE LOGO */
 .navbar {
     width: 100%;
     padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
     z-index: 10;
 }
 
-.logo-text {
-    font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
-    font-weight: 900;
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.game-logo-emblem {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #ff2a5f, #ffb703);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 42, 95, 0.7);
+    border: 2px solid rgba(255,255,255,0.8);
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.studio-name {
+    font-size: 0.7rem;
     letter-spacing: 3px;
+    color: #ffb703;
+    font-weight: 700;
+}
+
+.game-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
     color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 35px;
+    gap: 30px;
 }
 
 .nav-links a {
-    color: #ddd;
+    color: #ccc;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
@@ -81,17 +111,23 @@ body, html {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #ffd166;
+    color: #ffb703;
+    text-shadow: 0 0 10px #ffb703;
 }
 
 .btn-download {
-    background: #ffc107;
+    background: linear-gradient(45deg, #ffb703, #fb8500);
     color: #000;
     padding: 10px 25px;
     font-weight: 700;
     text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(255, 183, 3, 0.5);
+    transition: 0.3s;
+}
+
+.btn-download:hover {
+    transform: scale(1.05);
 }
 
 /* HERO CONTENT */
@@ -99,7 +135,7 @@ body, html {
     position: relative;
     z-index: 10;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .play-btn {
@@ -107,7 +143,7 @@ body, html {
     height: 75px;
     border-radius: 50%;
     border: 2px solid rgba(255,255,255,0.8);
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     font-size: 1.6rem;
     cursor: pointer;
@@ -120,13 +156,14 @@ body, html {
     transform: scale(1.1);
     background: #ff2a5f;
     border-color: #ff2a5f;
+    box-shadow: 0 0 30px rgba(255, 42, 95, 0.8);
 }
 
 .subtitle {
     font-family: 'Cinzel', serif;
     letter-spacing: 4px;
     color: #ffb703;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .main-title {
@@ -134,25 +171,25 @@ body, html {
     font-size: 3.5rem;
     line-height: 1.1;
     margin: 10px 0;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 25px rgba(0,0,0,0.9);
 }
 
 .crimson {
     color: #ff2a5f;
-    text-shadow: 0 0 25px rgba(255, 42, 95, 0.8);
+    text-shadow: 0 0 30px rgba(255, 42, 95, 0.9);
 }
 
 .time-badge {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.75);
     border: 1px solid rgba(255,255,255,0.2);
-    padding: 8px 20px;
+    padding: 8px 22px;
     border-radius: 30px;
     font-size: 0.85rem;
     margin: 15px 0 25px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 }
 
 .pulse-dot {
@@ -171,10 +208,10 @@ body, html {
 }
 
 .badge {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 10px 20px;
-    border-radius: 6px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -187,22 +224,23 @@ body, html {
 .badge:hover {
     border-color: #ff2a5f;
     transform: translateY(-3px);
+    background: rgba(255, 42, 95, 0.2);
 }
 
 .badge i {
-    color: #ffc107;
+    color: #ffb703;
     font-size: 1.1rem;
 }
 
 /* NEWS SECTION */
 .news-section {
     padding: 80px 8%;
-    background: #0a0a0c;
+    background: #0a0a0f;
 }
 
 .section-title {
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: #ff2a5f;
     text-align: center;
     letter-spacing: 3px;
@@ -212,7 +250,7 @@ body, html {
 .news-container {
     display: flex;
     gap: 30px;
-    background: #121216;
+    background: #121218;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.1);
@@ -224,8 +262,7 @@ body, html {
 }
 
 .news-banner img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: cover;
 }
 
@@ -254,7 +291,7 @@ body, html {
 }
 
 .news-item:hover h4 {
-    color: #ffd166;
+    color: #ffb703;
 }
 
 .news-date {
@@ -279,7 +316,7 @@ body, html {
 /* WORLD SECTION */
 .world-section {
     padding: 80px 8%;
-    background: #050507;
+    background: #060609;
 }
 
 .region-banners {
@@ -290,7 +327,7 @@ body, html {
 
 .region-card {
     height: 200px;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,13 +340,14 @@ body, html {
     background-position: center;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 .region-card::before {
     content: '';
     position: absolute;
     top:0; left:0; width:100%; height:100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.55);
 }
 
 .region-card h3 {
@@ -319,6 +357,7 @@ body, html {
 
 .region-card:hover {
     transform: scale(1.03);
+    border-color: #ffb703;
 }
 
 .crimson-realm { background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600'); }
@@ -327,14 +366,14 @@ body, html {
 
 /* FOOTER */
 .footer {
-    background: #000;
+    background: #020204;
     padding: 60px 8% 30px;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .subscribe-box {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .subscribe-box h3 {
@@ -356,7 +395,7 @@ body, html {
     background: #111;
     border: 1px solid #333;
     color: #fff;
-    border-radius: 4px 0 0 4px;
+    border-radius: 6px 0 0 6px;
     outline: none;
 }
 
@@ -366,8 +405,14 @@ body, html {
     border: none;
     color: #fff;
     font-weight: bold;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 6px 6px 0;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-sub:hover {
+    background: #ffb703;
+    color: #000;
 }
 
 .footer-links {
@@ -377,13 +422,13 @@ body, html {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin-bottom: 20px;
 }
 
 .social-icons a {
     color: #888;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     transition: 0.3s;
 }
 
