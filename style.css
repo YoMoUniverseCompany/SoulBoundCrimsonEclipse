@@ -261,19 +261,18 @@ body, html {
 
 .company-footer-branding {
     width: 100% !important;
-    max-width: 600px !important;
+    max-width: none !important;
     margin: 0 auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    display: block !important;
+    text-align: center !important;
 }
 
 .footer-company-logo {
-    width: 500px !important;
+    width: 380px !important; /* यहाँ से साइज एकदम परफेक्ट और बड़ी दिखेगी */
     height: auto !important;
-    max-width: none !important;
+    max-width: 100% !important;
     object-fit: contain !important;
-    display: block !important;
+    display: inline-block !important;
 }
 .copyright-text {
     font-size: 0.65rem;
