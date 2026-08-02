@@ -260,22 +260,23 @@ body, html {
 }
 
 .company-footer-branding {
-    width: 100% !important;
-    max-width: 180px !important; /* यह पिक्सेल साइज़ ठीक उसी कॉम्पैक्ट फुटर डायमेंशन के बराबर है जिसकी तू बात कर रहा है */
-    margin: 0 auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
 }
 
-.company-footer-branding {
-    width: 100% !important;
-    max-width: 320px !important; /* यह एकदम सही और सॉलिड चौड़ाई है */
-    margin: 0 auto !important;
-}
-
+/* यहाँ लोगो का साइज़ एकदम बड़ा और साफ़ कर दिया है */
 .footer-company-logo {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 320px !important; /* लोगो को एकदम पर्फ़ेक्ट प्रोपोर्शन में रखेगा */
-    object-fit: contain !important;
-    display: block !important;
-    margin: 0 auto !important;
+    height: 90px !important;
+    width: auto !important;
+    max-width: 400px !important;
+    object-fit: contain;
+    display: block;
+}
+
+.copyright-text {
+    font-size: 0.65rem;
+    color: #777;
+    letter-spacing: 1px;
 }
