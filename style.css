@@ -260,7 +260,7 @@ body, html {
 }
 
 .footer-company-logo {
-    width: 280px !important;
+    width: 450px !important; /* यहाँ से साइज एकदम परफेक्ट और बड़ी कर दी है */
     height: auto !important;
     max-width: 100% !important;
     object-fit: contain !important;
