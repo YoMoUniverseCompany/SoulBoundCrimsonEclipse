@@ -269,6 +269,7 @@ body, html {
 /* यहाँ लोगो का साइज़ एकदम बड़ा और साफ़ कर दिया है */
 .footer-company-logo {
     .footer-company-logo {
+  .footer-company-logo {
     height: auto !important;
     width: 380px !important;
     max-width: 100% !important;
