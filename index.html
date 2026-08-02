@@ -3,116 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoulBound Crimson Eclipse | Official Site</title>
+    <title>SoulBound: Crimson Eclipse - Official Website</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header class="hero">
+    <!-- Background Live Video (Aquaria Region - Auto Time-Sync) -->
+    <div class="video-container">
         <video autoplay muted loop id="bg-video">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-bright-sun-shining-in-a-blue-sky-41584-large.mp4" type="video/mp4">
+            <source src="morning_aquaria.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
         </video>
-        <div class="hero-overlay"></div>
+        <div class="video-overlay"></div>
+    </div>
 
-        <nav class="navbar">
-            <div class="nav-brand">
-               <div class="brand-titles">
-    <span class="studio-name">YO UNIVERSE</span>
-    <span class="game-name">SOULBOUND</span>
-    <span class="coming-soon-badge">COMING SOON</span>
-</div>
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="game-brand-logo">
+                <span class="game-title-text">SOULBOUND</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">HOME</a></li>
-                <li><a href="#news">NEWS</a></li>
-                <li><a href="#characters">CHARACTERS</a></li>
-                <li><a href="#world">WORLD</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="#download" class="btn-download"><i class="fas fa-download"></i> DOWNLOAD</a>
-            </div>
-        </nav>
-
-        <div class="hero-content">
-            <div class="play-btn-box">
-                <button class="play-btn" id="play-trailer-btn"><i class="fas fa-play"></i></button>
-            </div>
-            <h3 class="subtitle">A MASTERPIECE BY YO UNIVERSE</h3>
-            <h1 class="main-title">SOULBOUND<br><span class="crimson">CRIMSON ECLIPSE</span></h1>
-            
-            <div class="time-badge">
-                <span class="pulse-dot"></span>
-                <span id="world-time-text">SYNCING REAL-TIME ENVIRONMENT...</span>
-            </div>
-
-            <div class="platform-badges">
-                <div class="badge"><i class="fab fa-playstation"></i><span>PS5 / PS4</span></div>
-                <div class="badge"><i class="fab fa-windows"></i><span>PC Client</span></div>
-                <div class="badge"><i class="fab fa-xbox"></i><span>Xbox Series X|S</span></div>
-                <div class="badge"><i class="fab fa-google-play"></i><span>Google Play</span></div>
-                <div class="badge"><i class="fab fa-apple"></i><span>App Store</span></div>
-            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">HOME</a>
+                <a href="#">NEWS</a>
+                <a href="#">CHARACTERS</a>
+                <a href="#">EXPLORE</a>
+                <a href="#">MORE</a>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="login-btn">Log In</a>
+            <a href="#" class="download-btn-top">Download</a>
         </div>
     </header>
 
-    <section id="news" class="news-section">
-        <h2 class="section-title">LATEST NEWS & UPDATES</h2>
-        <div class="news-container">
-            <div class="news-banner">
-                <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800" alt="News Banner">
-                <div class="banner-tag">OFFICIAL</div>
-            </div>
-            <div class="news-list">
-                <div class="news-item active">
-                    <span class="news-date">AUG 2, 2026</span>
-                    <h4>SoulBound Crimson Eclipse: Dynamic World Teaser</h4>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">AUG 1, 2026</span>
-                    <h4>Global Pre-Registration Milestone Reached!</h4>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">JUL 30, 2026</span>
-                    <h4>Meet the Twin Sisters & Combat Mechanics</h4>
-                </div>
-                <a href="#" class="more-news">+ VIEW ALL NEWS</a>
+    <!-- Main Hero Section -->
+    <main class="hero-section">
+        <!-- Stylish Play / Trailer Button -->
+        <div class="play-trailer-container">
+            <div class="play-button-glow">
+                <svg viewBox="0 0 24 24" width="28" height="28">
+                    <path fill="currentColor" d="M8 5v14l11-7z"/>
+                </svg>
             </div>
         </div>
-    </section>
 
-    <section id="world" class="world-section">
-        <h2 class="section-title">EXPLORE THE REALMS</h2>
-        <div class="region-banners">
-            <div class="region-card crimson-realm">
-                <h3>Crimson Realm</h3>
-            </div>
-            <div class="region-card soul-sanctuary">
-                <h3>Soul Sanctuary</h3>
-            </div>
-            <div class="region-card eclipse-city">
-                <h3>Eclipse Capital</h3>
-            </div>
+        <div class="hero-tagline">
+            <h2>Released on Multiple Platforms - Coming Soon!</h2>
         </div>
-    </section>
 
-    <footer class="footer">
-        <div class="subscribe-box">
-            <h3>SUBSCRIBE FOR UPDATES & REDEEM CODES</h3>
-            <div class="sub-input-group">
-                <input type="email" placeholder="Enter your email address...">
-                <button class="btn-sub">SUBSCRIBE</button>
+        <!-- Platform Download & Rating Section (Matching Reference) -->
+        <div class="platforms-container">
+            <div class="platform-icons">
+                <div class="p-badge">PS5</div>
+                <div class="p-badge">PC Download</div>
+                <div class="p-badge">XBOX SERIES X|S</div>
+                <div class="p-badge">Google Play Games</div>
+                <div class="p-badge">App Store</div>
+                <div class="p-badge">Google Play</div>
+                <div class="p-badge">EPIC GAMES</div>
+            </div>
+
+            <!-- ESRB Rating Box -->
+            <div class="esrb-rating-box">
+                <div class="esrb-logo">T</div>
+                <div class="esrb-text">
+                    <strong>TEEN</strong>
+                    <p>Fantasy Violence, Mild Suggestive Themes, Mild Language, Use of Alcohol</p>
+                    <span>In-Game Purchases (Includes Random Items) / Users Interact</span>
+                </div>
             </div>
         </div>
-        <div class="footer-links">
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <p class="copyright">© 2026 YO UNIVERSE. All Rights Reserved. Designed with AAA Standards.</p>
+    </main>
+
+    <!-- Footer Section with Yomo Universe Branding -->
+    <footer class="main-footer">
+        <div class="footer-links-menu">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Help Center</a>
+        </div>
+        
+        <!-- Yomo Universe Company Logo & Rights -->
+        <div class="company-footer-branding">
+            <img src="yomo_logo.png" alt="Yomo Universe Logo" class="footer-company-logo">
+            <p class="copyright-text">© 2027 Yomo Universe. All Rights Reserved.</p>
         </div>
     </footer>
 
