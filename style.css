@@ -166,3 +166,69 @@ body {
     color: #888;
     background: rgba(0,0,0,0.5);
 }
+/* Character Showcase Styling */
+.character-section {
+    padding: 80px 5%;
+    background: rgba(0, 0, 0, 0.85);
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #ff2a5f;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(255, 42, 95, 0.5);
+}
+
+.character-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.char-card {
+    background: linear-gradient(145deg, #111, #1a1a2e);
+    border: 1px solid rgba(255, 42, 95, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.char-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 42, 95, 0.4);
+}
+
+.char-img-box img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.char-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.element-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffb703;
+    letter-spacing: 2px;
+}
+
+.char-info h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    margin: 5px 0 10px;
+}
+
+.char-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+    line-height: 1.4;
+}
